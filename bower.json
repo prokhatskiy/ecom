@@ -1,0 +1,23 @@
+{
+  "name": "ECOM Challenge",
+  "version": "0.1",
+
+  "authors": [
+    "Prokhatskyi Artem <Artem_Prokhatskyi@epam.com>"
+  ],
+
+  "description": "Packages for ECOM",
+  "main": "/",
+
+  "dependencies": {
+    "jquery" : "~2.0"
+  },
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

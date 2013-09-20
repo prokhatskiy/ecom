@@ -3,3 +3,7 @@
 .sass-cache
 .idea
 .project
+node_modules
+design
+*.psd
+*.log

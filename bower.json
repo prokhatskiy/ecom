@@ -1,5 +1,5 @@
 {
-  "name": "ECOM Challenge",
+  "name": "ECOMChallenge",
   "version": "0.1",
 
   "authors": [
@@ -8,8 +8,11 @@
 
   "description": "Packages for ECOM",
   "main": "/",
+  "license": "MIT",
 
   "dependencies": {
+    "underscore" : "~1.5.2",
+    "backbone" : "~1.0.0",
     "jquery" : "~2.0"
   },
 

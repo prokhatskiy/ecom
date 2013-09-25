@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     },
     watch: {
       css: {
-        files: ['scss/*.scss', 'blocks/*.html'],
+        files: ['scss/*.scss', 'blocks/*.html', 'layouts/*.html'],
         tasks: ['compass','clean:css', 'includereplace']
       },
     },

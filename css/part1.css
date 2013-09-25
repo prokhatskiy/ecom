@@ -1,0 +1,9 @@
+.l-wrapper {
+  width: 100%;
+  max-width: 1294px;
+  margin: 0 auto;
+  min-width: 990px;
+  background-color: #f4f4f4; }
+
+.l-block {
+  position: relative; }

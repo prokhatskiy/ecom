@@ -115,13 +115,6 @@ var Ui,
 			    }
 			}
 
-			function handle(delta) {
-		        if (delta < 0)
-					console.log('bottom')
-		        else
-					console.log('top')
-			}
-
 			function wheel(event){
 		        var delta = 0,
 		            direction;

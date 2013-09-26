@@ -6,33 +6,11 @@
     @@include('../blocks/head.html')
     <body>                
         <div class="l-wrapper">
-            <!-- top  -->
-            <div class="l-block" data-id="top">
-                <header class="l-header">
-                 1   
-                </header>                
-            </div>
-            <!-- /top  -->
-            
-            <!-- categories  -->
-            <div class="l-block" data-id="categories">
-                2
-            </div>
-            <!-- /categories  -->
-            
-            <!-- products  -->
-            <div class="l-block" data-id="products">
-                3
-            </div>
-            <!-- /products  -->
-            
-            <!-- footer  -->
-            <div class="l-block" data-id="footer">
-                <footer class="l-footer">
-                    4
-                </footer>                
-            </div>
-            <!-- /footer  -->
+            @@include('../blocks/top.html')
+            @@include('../blocks/categories.html')
+            @@include('../blocks/products.html')
+            @@include('../blocks/footer.html')           
+            @@include('../blocks/bottom.html')        
         </div>
     </body>
 </html>

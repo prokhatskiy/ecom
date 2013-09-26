@@ -1,0 +1,37 @@
+// Кодируем картинку в base64 и назначаем блоку её размер
+@mixin inline-block($url, $repeat:no-repeat, $x:0, $y:0, $color:transparent){
+	width: image-width($url);
+	height: image-height($url);
+	background: inline-image($url) no-repeat $x $y $color;
+}
+
+// Кодируем картинки в base64
+@mixin inline($url, $repeat:no-repeat, $x:0, $y:0, $color:transparent) {
+	background: inline-image($url) $repeat $x $y $color;
+}
+
+// Фоновый текст с альфа каналом (хак для IE)
+@mixin rgbabg($r, $g, $b, $a){
+	$iecolor : ie-hex-str(rgba($r, $g, $b, $a));
+
+	background-color: rgba($r, $g, $b, $a);	
+	.lt-ie9 & {
+		background:transparent;
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$iecolor},endColorstr=#{$iecolor});
+    	zoom: 1;
+	}
+}
+
+//clearfix
+@mixin clearfix {
+	//clearfix
+	&:before,
+	&:after{
+		content: ' ';
+		display: table;
+	}
+
+	&:after{
+		clear: both;
+	}
+}

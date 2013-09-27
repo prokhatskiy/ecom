@@ -1,0 +1,352 @@
+@import "compass";
+@import "_variables";
+@import "_mixins";
+/* ==========================================================================
+   userpanel
+   ========================================================================== */
+
+.userpanel{	
+	height: 41px;	
+	line-height: 41px;
+	text-align: right;
+	border-bottom: 1px solid #dedfe0;
+	@include box-shadow(0 1px 0px #f4f4f5);
+	clear: both;
+	
+	.userpanel__btn{
+		display: inline-block;		
+		vertical-align: middle;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #262626;
+		margin-right: 20px;
+	}
+
+	.userpanel__btn_light{
+		color: #a9a9a9;
+	}
+
+	.userpanel__btn_selector,
+	.userpanel__btn_wish-list,
+	.userpanel__lang-btn{
+		@include rmBtnStyles;
+	}
+
+	.userpanel__btn_selector{
+		float: left;
+		line-height: 41px;
+		margin-left: 184px;
+		padding-right: 20px;
+		@include inline('../img/arr_top.png', no-repeat, right, center);
+	}
+
+	.userpanel__btn_wish-list{
+		padding-left: 20px;
+		@include inline('../img/heart-ico.png', no-repeat, left, center);
+	}
+
+	.userpanel__lang{
+		text-align: left;
+		height: 41px;
+		line-height: 41px;
+		float: right;
+		padding-left: 50px;
+		@include inline('../img/world-ico.png', no-repeat, left, center);
+	}
+
+	.userpanel__lang-btn{
+		position: relative;
+		padding: 0 13px 0 22px;
+		@include inline('../img/arr_bottom.png', no-repeat, right, center);
+		
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+		}
+	}
+
+	.userpanel__lang-btn_usa{
+		&:before{
+			@include inline-block('../img/usa-ico.png');
+			margin-top: - round(image-height('../img/usa-ico.png')/2);
+		}		
+	}
+
+	.userpanel__narrow{
+		display: none;
+	}
+
+	.userpanel__wide{
+		display: inline;
+	}
+}
+
+@media only screen and (max-width : 1050px) {
+	.userpanel{
+		.userpanel__narrow{
+			display: inline;
+		}
+
+		.userpanel__wide{
+			display: none;
+		}
+	}
+}
+
+/* ==========================================================================
+   logo
+   ========================================================================== */
+
+.logo{
+	position: relative;
+	@include imageSize('../img/logo.png');
+	margin: 0;
+	top: -49px;
+	float: left;
+	
+	&:before{
+		content: '';
+		position: absolute;
+		top: 14px;
+		left: 50%;
+		margin-left: -45px;
+		width: 90px;
+		height: 10px;
+		z-index: 1;
+		background-color: #fff;
+	}
+
+	.logo__l{
+		@include coverSize;
+		@include hideText;
+		@include inline('../img/logo.png');
+		z-index: 2;
+	}
+}
+
+/* ==========================================================================
+   search
+   ========================================================================== */
+
+.search{
+	position: absolute;
+	top: 30px;
+	left: 185px + 20px;
+	right: 300px + 20px;
+	height: 37px;
+	
+	.search__query{
+		height: 25px;
+		line-height: 25px;
+		border: 1px solid #a5acb5;
+		padding: 5px 35px 5px 13px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		position: absolute;
+	}
+	
+	@mixin placeholder{
+		text-transform: uppercase;
+		font-size: 11px;
+		color: #c6ced9;
+		font-size: 'Open Sans';	
+	}
+
+	.search__query::-webkit-input-placeholder {
+		@include placeholder;
+	}
+
+	.search__query:-moz-placeholder {
+		@include placeholder;
+	}
+
+	.search__btn{
+		@include hideText;
+		@include rmBtnStyles;
+		@include inline('../img/search-ico.png', no-repeat, center, center);
+		position: absolute;
+		z-index: 2;
+		height: 100%;
+		top: 0;
+		right: 0;
+		width: 35px;
+	}
+}
+
+/* ==========================================================================
+   cart
+   ========================================================================== */
+
+.cart{
+	width: 250px - 77px - 25px;
+	height: 80px - 19px;
+	position: absolute;
+	color: #fff;
+	right: 20px;
+	top: 30px;
+	text-transform: uppercase;
+	padding: 19px 25px 0 77px;
+	@include inline('../img/cart-ico.png', no-repeat,  24px, center, #39a0c2);
+	
+	.cart__t{
+		display: inline-block;
+		margin: 0;
+		font-weight: normal;
+		font-size: 16px;		
+		color: #fff;
+		padding-bottom: 3px;
+		margin-bottom: 4px;
+		border-bottom: 1px solid #fff;
+	}
+
+	.cart__details{
+		font-size: 12px;
+		@include ellipsis;
+	}
+
+	.cart__btn{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 19px;
+		@include hideText;
+		@include rmBtnStyles;
+		display: block;
+		height: 100%;
+		@include inline('../img/arr_bottom_white.png', no-repeat, center, center, #2a98bd);
+	}
+}
+
+/* ==========================================================================
+   nav
+   ========================================================================== */
+
+.nav{
+	padding-right: 300px;
+	position: relative;
+	top: -13px;
+	clear: both;
+	
+	.nav__inner{
+		display: table;
+		width: 100%;
+	}
+	
+	.nav__l{
+		display: table-cell; 
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none;
+		font-weight: bold;
+		color: #262626;
+		font-size: 16px;
+		
+		&:first-child{
+			text-align: left;
+		}
+
+		&:last-child{
+			text-align: right;
+		}
+	}
+
+	.nav__l_highlight{
+		color: #7a5034;
+	}
+
+	.nav__l_imp{
+		color: #d8502e;
+	}
+}
+
+/* ==========================================================================
+   promo
+   ========================================================================== */
+
+.promo{
+	min-width: 1000px;
+	position: absolute;
+	top: 180px;
+	bottom : 0;
+	width: 100%;
+	left: 0;
+	background-color: #f5f5f4; 
+	
+	.promo__main-li{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		bottom: 60px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.promo__main-i{
+		@include coverSize;
+		@include background-size(cover);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.promo__main-i_top-right{
+		background-position: right top;
+	}
+
+	.promo__nav{
+		position: absolute;
+		bottom: 32px;
+		width: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		z-index: 3;
+		text-align: center;
+	}
+
+	.promo__nav-i{
+		display: inline-block;
+		width: 280px;
+		height: 110px;
+		@include background-size(cover);
+		background-repeat: no-repeat;
+		background-position: center;
+		border: 2px solid #fff;
+		margin: 0 10px;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.promo__nav-i_select{
+		border-color: #39a0c2;
+		
+		&:before{
+			content: '';
+			position: absolute;
+			top: -8px;
+			left: 50%;
+			margin-left: -6px;
+			border-top: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-bottom: 6px solid #39a0c2;
+			width: 0;
+			height: 0;
+		}
+	}
+
+	.promo__laoder{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: rgba(#1c94b8, 3/10);
+	}
+}

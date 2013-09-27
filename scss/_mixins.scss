@@ -10,6 +10,22 @@
 	background: inline-image($url) $repeat $x $y $color;
 }
 
+@mixin imageSize($url) {
+	width: image-width($url);
+	height: image-height($url);
+}
+
+@mixin coverSize {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin hideText {
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
 // Фоновый текст с альфа каналом (хак для IE)
 @mixin rgbabg($r, $g, $b, $a){
 	$iecolor : ie-hex-str(rgba($r, $g, $b, $a));
@@ -34,4 +50,10 @@
 	&:after{
 		clear: both;
 	}
+}
+
+@mixin rmBtnStyles {
+	border: 0;
+	padding: 0;
+	background: none;
 }

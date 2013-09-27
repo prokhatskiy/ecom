@@ -1,13 +1,23 @@
-.l-wrapper{
-  width: 100%;
-  max-width: 1294px;
-  margin: 0 auto;
-  min-width: 990px;
-  
-  // test styles
-  background-color: #f4f4f4;
+@import "compass";
+@import "_variables";
+@import "_mixins";
+/* ==========================================================================
+   layout
+   ========================================================================== */
+.l-inner{
+	width: 95%;
+	padding: 0 20px;
+	max-width: 1294px;
+	margin: 0 auto;
+	position: relative;
+	min-width: 960px;
+	@include clearfix;
+}
+
+.l-header__in{
+	padding-top: 30px;
 }
 
 .l-block{
-  position: relative;
+	position: relative;
 }

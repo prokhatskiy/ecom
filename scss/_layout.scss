@@ -19,5 +19,11 @@
 }
 
 .l-block{
+	max-width: 100%;
+	overflow: hidden;
 	position: relative;
+}
+
+.l-block_categories{
+	background: #f5f5f4;
 }

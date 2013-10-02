@@ -283,6 +283,13 @@ table {
   font-style: normal; }
 
 @font-face {
+  font-family: 'Open Sans Light';
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Helvetica Neue Ultralight';
   src: url("../fonts/helveticaneuecyr-ultralight.eot");
   src: url("../fonts/helveticaneuecyr-ultralight.eot?#iefix") format("embedded-opentype"), url("../fonts/helveticaneuecyr-ultralight.woff") format("woff"), url("../fonts/helveticaneuecyr-ultralight.ttf") format("truetype"), url("../fonts/helveticaneuecyr-ultralight.svg#helveticaneuecyrultralight") format("svg");
@@ -732,3 +739,172 @@ body {
     top: 9px; }
   .categories .categories__label_bottom {
     bottom: 9px; }
+
+
+
+
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+.block-footer{
+  background-color: #333;
+  position: relative;
+  z-index: 1; }
+.block-footer:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #444;
+  z-index: 2;
+  left: 50%;
+  top: 0; }
+.block-footer:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  background-color: #fff;
+  z-index: 3;
+  left: 0;
+  top: 0; }
+
+  .footer-top{
+    width: 100%;
+    max-width: 924px;
+    min-width: 610px;
+    margin: 0 auto 70px auto;
+    padding-right: 370px;
+    overflow: hidden;
+    border: #d8d8d8 solid 1px;
+    background-color: #fdfdfd;
+    position: relative;
+    z-index: 4; }
+
+    .subscribe {
+      float: left;
+      width: 100%;
+      position: relative;
+      background-color: #f6f6f6; }
+      .subscribe:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-top: 0;
+        border-right: #f6f6f6 solid 130px;
+        border-bottom: #f0f0f0 solid 130px;
+        border-left: #f6f6f6 solid 130px;
+        z-index: 5;
+        margin-left: -130px; }
+      .subscribe:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-top: #fff solid 130px;
+        border-right: transparent solid 130px;
+        border-bottom: 0;
+        border-left: transparent solid 130px;
+        z-index: 6;
+        margin-left: -130px; }
+      .subscribe__content {
+        position: relative;
+        padding: 28px 6% 14px 6%;
+        z-index: 7; }
+        .subscribe__email {
+          height: 25px;
+          line-height: 25px;
+          border: 1px solid #a5acb5;
+          padding: 5px 2%;
+          width: 67%;
+          font-size: 11px;
+          color: #c6ced9;
+          font-size: 'Open Sans Light';
+          text-transform: uppercase;
+          margin: 0 10px 10px 0; }
+        .subscribe__btn{
+          background-color: #157b9a;
+          text-transform: uppercase;
+          border: none;
+          height: 37px;
+          color: #fff;
+          font-size: 12px;
+          width: 25%; }
+        .subscribe__btn:hover{
+          opacity: 0.9; }
+        .subscribe .unsubscr{
+          font-size: 10px;
+          color: #333;
+          text-transform: lowercase; }
+
+    .social{
+      float: right;
+      background-color: #fdfdfd;
+      width: 300px;
+      padding: 28px 30px 28px 40px;
+      margin-right: -370px; }
+      .social__icon{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 4px 10px 0 0;
+        overflow: hidden;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+      .social__icon:last-child{
+        margin-right: 0; }
+      .social__icon:hover{
+        opacity: 0.9; }
+      .social__icon.fb{
+        background-color: #3a589b; }
+      .social__icon.tw{
+        background-color: #598dca; }
+      .social__icon.gp{
+        background-color: #d6492f; }
+      .social__icon.yt{
+        background-color: #e41313; }
+      .social__icon.fb5{
+        background-color: #34506b; }
+      .social__icon.fb6{
+        background-color: #517fa6; }
+      .social__icon.pin{
+        background-color: #cb2027; }
+        
+      .footer-top header{
+        font-family: 'Open Sans Light';
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 1;
+        margin-bottom: 18px;
+        color: #262626; }
+
+  .l-footer{
+    width: 100%;
+    max-width: 924px;
+    min-width: 610px;
+    padding-right: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    background-color: #333;
+    z-index: 3; }
+    .footer-nav{
+      float: left;
+      width: 100%;
+      position: relative; }
+    .footer-world{
+      position: absolute;
+      height: 100%;
+      right: 0;
+      background-color: #444;
+      width: 300px;
+      padding: 28px 30px 28px 40px; }

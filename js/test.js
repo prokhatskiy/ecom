@@ -1,12 +1,15 @@
 $(document).on('ready', function() {
 	var $blocks = $('.l-block'),
-	    $win = $(window);
-
-	var categories = new Categories();
-	var products = new Products();
+	    $win = $(window),
+	    time = new Date(),
+	    categories = new Categories(),
+	    products = new Products();
 
 	function resize() {
-		var height = $win.height();
+		var now = new Date(),
+		    height;
+
+		height = $win.height();
 
 		$blocks.each(function() {
 			$(this).css({
@@ -18,8 +21,27 @@ $(document).on('ready', function() {
 		products.onResize();
 	}
 
+	
 	resize();
-	$win.on('resize', resize);
+	var rtime = new Date(1, 1, 2000, 12,00,00);
+	var timeout = false;
+	var delta = 200;
+	$(window).resize(function() {
+	    rtime = new Date();
+	    if (timeout === false) {
+	        timeout = true;
+	        setTimeout(resizeend, delta);
+	    }
+	});
+
+	function resizeend() {
+	    if (new Date() - rtime < delta) {
+	        setTimeout(resizeend, delta);
+	    } else {
+	        timeout = false;
+	        resize();
+	    }               
+	}
 });
 
 

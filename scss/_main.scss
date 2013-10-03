@@ -368,6 +368,10 @@
 	height: 100%;
 	min-width: 100%;
 	
+	.categories__inner{
+		padding-top: 42px;	
+	}
+
 	.categories__row{
 		margin: 0;
 		padding: 0;
@@ -393,6 +397,7 @@
 		height: 390px;
 		position: relative;
 		cursor: pointer;
+		@include transition(all .5s);
 	}
 
 	.categories__i_2col{
@@ -520,6 +525,7 @@
 
 .products{
 	.products__header{
+		padding-top: 42px;
 		height: 100px;
 		line-height: 100px;
 	}
@@ -579,6 +585,7 @@
 		float: left;
 		position: relative;
 		background-color: #FFF;
+		@include transition(all .5s);
 		
 		&:after{
 			content: '';
@@ -763,6 +770,23 @@
 		
 		&:hover{
 			border: 1px solid #fff;
+		}
+	}
+}
+
+@media only screen and (max-height : 700px) {
+	.products{
+		.products__t{
+			font-size: 13px;
+		}
+	}
+}
+
+@media only screen and (min-height : 900px) {
+	.products{
+		.products__t{
+			font-size: 18px;
+			line-height: 20px;
 		}
 	}
 }

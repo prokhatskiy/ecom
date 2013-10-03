@@ -625,6 +625,8 @@ body {
   top: 0;
   height: 100%;
   min-width: 100%; }
+  .categories .categories__inner {
+    padding-top: 42px; }
   .categories .categories__row {
     margin: 0;
     padding: 0;
@@ -643,7 +645,11 @@ body {
     width: 390px;
     height: 390px;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
   .categories .categories__i_2col {
     width: 780px; }
   .categories .categories__banner {
@@ -741,6 +747,7 @@ body {
    products
    ========================================================================== */
 .products .products__header {
+  padding-top: 42px;
   height: 100px;
   line-height: 100px; }
 .products .products__tumbler {
@@ -791,7 +798,11 @@ body {
   height: 340px;
   float: left;
   position: relative;
-  background-color: #FFF; }
+  background-color: #FFF;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
   .products .products__i:after {
     content: '';
     z-index: 1;
@@ -938,6 +949,13 @@ body {
   .products .products__btn:hover {
     border: 1px solid #fff; }
 
+@media only screen and (max-height: 700px) {
+  .products .products__t {
+    font-size: 13px; } }
+@media only screen and (min-height: 900px) {
+  .products .products__t {
+    font-size: 18px;
+    line-height: 20px; } }
 /* ==========================================================================
    reting
    ========================================================================== */

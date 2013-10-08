@@ -18,17 +18,16 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 285px;
-  background-color: #fff;
+  height: 330px;
+  background-color: #eeedeb;
   z-index: 3;
   left: 0;
   top: 0; }
 
   .footer-top{
-    width: 100%;
     max-width: 924px;
     min-width: 610px;
-    margin: 70px auto;
+    margin: 115px auto 70px;
     padding-right: 370px;
     overflow: hidden;
     border: #d8d8d8 solid 1px;
@@ -36,12 +35,12 @@
     position: relative;
     z-index: 4; }
 
-    .subscribe {
+    .subscribe{
       float: left;
       width: 100%;
       position: relative;
       background-color: #f6f6f6; }
-      .subscribe:before {
+      .subscribe:before{
         content: "";
         position: absolute;
         bottom: 0;
@@ -54,7 +53,7 @@
         border-left: #f6f6f6 solid 130px;
         z-index: 5;
         margin-left: -130px; }
-      .subscribe:after {
+      .subscribe:after{
         content: "";
         position: absolute;
         top: 0;
@@ -67,11 +66,11 @@
         border-left: transparent solid 130px;
         z-index: 6;
         margin-left: -130px; }
-      .subscribe__content {
+      .subscribe__content{
         position: relative;
         padding: 28px 6% 14px 6%;
         z-index: 7; }
-        .subscribe__email {
+        .subscribe__email{
           height: 25px;
           line-height: 25px;
           border: 1px solid #a5acb5;
@@ -117,19 +116,19 @@
       .social__icon:hover{
         opacity: 0.9; }
       .social__icon.fb{
-        background-color: #3a589b; }
+        background-image: url("../img/fb.png"); }
       .social__icon.tw{
-        background-color: #598dca; }
+        background-image: url("../img/tw.png"); }
       .social__icon.gp{
-        background-color: #d6492f; }
+        background-image: url("../img/gp.png"); }
       .social__icon.yt{
-        background-color: #e41313; }
+        background-image: url("../img/yt.png"); }
       .social__icon.fb5{
-        background-color: #34506b; }
-      .social__icon.fb6{
-        background-color: #517fa6; }
+        background-image: url("../img/fb5.png"); }
+      .social__icon.ig{
+        background-image: url("../img/ig.png"); }
       .social__icon.pin{
-        background-color: #cb2027; }
+        background-image: url("../img/pin.png"); }
         
       .footer-top header{
         font-family: 'Open Sans Light';
@@ -140,7 +139,6 @@
         color: #262626; }
 
   .l-footer{
-    width: 100%;
     max-width: 924px;
     min-width: 610px;
     padding-right: 370px;
@@ -155,10 +153,148 @@
       float: left;
       width: 100%;
       position: relative; }
+      .footer-nav__content{
+        padding: 92px 0 0;
+        position: relative;
+        overflow: hidden; }
+      .footer-nav__col{
+        float: left;
+        margin:0 14% 0 1%; }
+      .footer-nav__col:last-child{
+        margin-right:0; }
+      .footer-nav__l{
+        display: block;
+        margin-bottom: 22px;
+        white-space: nowrap;
+        font-size: 14px;
+        font-family: 'Open Sans Light';
+        color: #eeebea;
+        text-transform: uppercase;
+        text-decoration: none; }
+      .footer-nav__l:hover{
+        color: #828282; }
+      .footer-nav__l:first-child{
+        font-size: 16px;
+        color: #828282;
+        margin-bottom: 52px; }
+      .footer-nav__l.footer-logo{
+        margin: -41px 0 55px;
+        width: 100px;
+        height: 56px;
+        outline: none;
+        background-image: url("../img/footer-logo.svg"); }
+      .footer-nav__l.sale{
+        color: #d8502e; }
+      .copy{
+        width: 90px;
+        margin: -50px 0 0 6px;
+        font-size: 10px;
+        color: #828282;
+        line-height: 14px; }
+
     .footer-world{
       position: absolute;
       height: 100%;
       right: 0;
       background-color: #444;
       width: 300px;
-      padding: 28px 30px 28px 40px; }
+      padding: 92px 23px 0 43px; }
+      .footer-world__hdr{
+        font-size: 16px;
+        font-family: 'Open Sans Light';
+        color: #828282;
+        text-transform: uppercase; }
+      .footer-world__hdr span{
+        color: #eeebea; }
+      .footer-world__img{
+        display: block;
+        margin: 23px 0 17px; }
+      .footer-world__form-hdr{
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-family: 'Open Sans Light';
+        color: #fff;
+        text-transform: uppercase; }
+      .footer-world__city{
+        height: 25px;
+        line-height: 25px;
+        border: 1px solid #a5acb5;
+        padding: 5px 10px;
+        width: 189px;
+        font-size: 11px;
+        color: #c6ced9;
+        font-family: 'Open Sans Light';
+        text-transform: uppercase;
+        margin: 0 10px 0 0; }
+      .footer-world__btn{
+        margin-right: -25px;
+        background-color: #d8502e;
+        text-transform: uppercase;
+        border: none;
+        height: 37px;
+        color: #fff;
+        font-size: 12px;
+        width: 100px; }
+        .footer-world__btn:hover{
+          opacity: 0.9; }
+      .footer-world__pay{
+        margin-top: 10%; }
+      .footer-world__pay-l{
+        display: inline-block;
+        margin-right: 7px;
+        height: 22px; }
+      .footer-world__pay-l:last-child{
+        margin-left: 1px;
+        margin-right: -24px; }
+      .footer-world__pay-l.visa{
+        width: 48px;
+        background-image: url("../img/visa.svg"); }
+      .footer-world__pay-l.visa:hover{
+        background-image: url("../img/visa_active.svg"); }
+      .footer-world__pay-l.mc{
+        width: 44px;
+        background-image: url("../img/mastercard.svg"); }
+      .footer-world__pay-l.mc:hover{
+        background-image: url("../img/mastercard_active.svg"); }
+      .footer-world__pay-l.amex{
+        width: 49px;
+        background-image: url("../img/amex.svg"); }
+      .footer-world__pay-l.amex:hover{
+        background-image: url("../img/amex_active.svg"); }
+      .footer-world__pay-l.pp{
+        width: 37px;
+        background-image: url("../img/paypal.svg"); }
+      .footer-world__pay-l.pp:hover{
+        background-image: url("../img/paypal_active.svg"); }
+      .footer-world__pay-l.wui{
+        width: 43px;
+        background-image: url("../img/wui.svg"); }
+      .footer-world__pay-l.wui:hover{
+        background-image: url("../img/wui_active.svg"); }
+      .footer-world__pay-l.mb{
+        width: 45px;
+        background-image: url("../img/moneybookers.svg"); }
+      .footer-world__pay-l.mb:hover{
+        background-image: url("../img/moneybookers_active.svg"); }
+
+@media screen and (max-height: 745px) {
+.block-footer:after{
+  height: 260px; }
+.footer-top{
+  margin: 80px auto 35px; }
+.footer-nav__content{
+  padding: 57px 0 0; }
+.footer-nav__l{
+  margin-bottom: 14px; }
+.footer-nav__l:first-child{
+  margin-bottom: 32px; }
+.footer-world{
+  padding-top: 57px; }
+.footer-world__img{
+  margin: 13px auto 8px;
+  height: 115px; }
+.footer-world__form-hdr{
+  margin-bottom: 9px; }
+.footer-world__pay{
+  margin-top: 15px; }
+}

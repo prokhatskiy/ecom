@@ -43,7 +43,7 @@ function Gallery(conf) {
 
 	this.init();
 	this.conf.$btns.on('click', function() {
-		_this.set($(this).attr('data-id'));
+		_this.set(+$(this).attr('data-id'));
 		return false;
 	});
 
@@ -58,18 +58,19 @@ Gallery.prototype.init = function() {
 
 Gallery.prototype.set = function(id) {
 	this.destroyTimer();
+	this.id = id;
+	this.$time = $('#promo-btn-' + id + ' .promo__laoder');
 	$('.promo__main-i_select').removeClass('promo__main-i_select');
 	$('#promo-' + id).addClass('promo__main-i_select');
 	$('.promo__nav-i_select').removeClass('promo__nav-i_select');
-	$('#promo-btn-' + id).addClass('promo__nav-i_select');
-	this.id = id;
-	this.$time = $('#promo-btn-' + id + ' .promo__laoder');
+	$('#promo-btn-' + id).addClass('promo__nav-i_select');	
 	this.initTimer();
 }
 
 Gallery.prototype.initTimer = function() {
 	var _this = this,
 	    id;
+	    
 	this.timer = setInterval(function() {
 		id = _this.id+1;		
 		if(_this.id === 3) id = 1;
@@ -80,7 +81,6 @@ Gallery.prototype.initTimer = function() {
 Gallery.prototype.destroyTimer = function() {
 	clearInterval(this.timer);
 }
-
 
 // Categories
 function Categories(conf) {

@@ -313,12 +313,13 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		@include opacity(0);
-		@include transition(opacity .5s);
+		@include transition(opacity 0s);
 	}
 
 	.promo__main-i_select{
 		z-index: 2;
 		@include opacity(1);
+		@include transition(opacity .5s);
 	}
 
 	.promo__main-i_top-right{
@@ -367,8 +368,8 @@
 		}
 
 		.promo__laoder{
-			@include opacity(1);
 			width: 100%;
+			@include transition(width linear 10s);
 		}
 	}
 
@@ -379,8 +380,7 @@
 		height: 100%;
 		width: 0;
 		background-color: rgba(#1c94b8, 3/10);
-		@include transition(width linear 10s);
-		@include opacity(0);
+		@include transition(width linear 0s);
 	}
 }
 

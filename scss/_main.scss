@@ -270,6 +270,14 @@
 	}
 }
 
+@media only screen and (max-width : 1050px) {
+	.nav{
+		.nav__l{
+			padding-right: 30px;
+		}
+	}
+}
+
 /* ==========================================================================
    promo
    ========================================================================== */
@@ -296,10 +304,21 @@
 	}
 
 	.promo__main-i{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
 		@include coverSize;
 		@include background-size(cover);		
 		background-repeat: no-repeat;
 		background-position: center;
+		@include opacity(0);
+		@include transition(opacity .5s);
+	}
+
+	.promo__main-i_select{
+		z-index: 2;
+		@include opacity(1);
 	}
 
 	.promo__main-i_top-right{
@@ -346,6 +365,11 @@
 			width: 0;
 			height: 0;
 		}
+
+		.promo__laoder{
+			@include opacity(1);
+			width: 100%;
+		}
 	}
 
 	.promo__laoder{
@@ -353,7 +377,10 @@
 		top: 0;
 		left: 0;
 		height: 100%;
+		width: 0;
 		background-color: rgba(#1c94b8, 3/10);
+		@include transition(width linear 10s);
+		@include opacity(0);
 	}
 }
 
@@ -397,7 +424,6 @@
 		height: 390px;
 		position: relative;
 		cursor: pointer;
-		@include transition(all .5s);
 	}
 
 	.categories__i_2col{
@@ -434,7 +460,7 @@
 	.categories__banner_video{
 		.categories__hover{
 			@include opacity(1);
-			@include transition(background 2s);
+			@include transition(background 1s);
 			background: url('../img/play.png') no-repeat center;
 			
 			&:hover{
@@ -585,7 +611,6 @@
 		float: left;
 		position: relative;
 		background-color: #FFF;
-		@include transition(all .5s);
 		
 		&:after{
 			content: '';

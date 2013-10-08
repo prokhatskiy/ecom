@@ -23,27 +23,63 @@ $(document).on('ready', function() {
 
 	
 	resize();
-
-	var rtime = new Date(1, 1, 2000, 12,00,00);
-	var timeout = false;
-	var delta = 200;
-	$(window).resize(function() {
-	    rtime = new Date();
-	    if (timeout === false) {
-	        timeout = true;
-	        setTimeout(resizeend, delta);
-	    }
+	$(window).on('resize', function() {
+	    resize();
 	});
 
-	function resizeend() {
-	    if (new Date() - rtime < delta) {
-	        setTimeout(resizeend, delta);
-	    } else {
-	        timeout = false;
-	        resize();
-	    }               
-	}
+	var gal = new Gallery();
 });
+
+function Gallery(conf) {
+	var _this = this,
+	    conf = conf || {};
+
+	this.conf = {
+		$win : $(window),
+		$el : $('#promos'),
+		$btns : $('#promo .promo__nav-i'),
+		$catItems : $('#categories .categories__i')
+	}
+
+	this.init();
+	this.conf.$btns.on('click', function() {
+		_this.set($(this).attr('data-id'));
+		return false;
+	});
+
+
+	return this;
+}
+
+Gallery.prototype.init = function() {
+	this.set(1);
+	return this;
+}
+
+Gallery.prototype.set = function(id) {
+	this.destroyTimer();
+	$('.promo__main-i_select').removeClass('promo__main-i_select');
+	$('#promo-' + id).addClass('promo__main-i_select');
+	$('.promo__nav-i_select').removeClass('promo__nav-i_select');
+	$('#promo-btn-' + id).addClass('promo__nav-i_select');
+	this.id = id;
+	this.$time = $('#promo-btn-' + id + ' .promo__laoder');
+	this.initTimer();
+}
+
+Gallery.prototype.initTimer = function() {
+	var _this = this,
+	    id;
+	this.timer = setInterval(function() {
+		id = _this.id+1;		
+		if(_this.id === 3) id = 1;
+		_this.set(id);
+	}, 10000);
+}
+
+Gallery.prototype.destroyTimer = function() {
+	clearInterval(this.timer);
+}
 
 
 // Categories
@@ -64,7 +100,7 @@ function Categories(conf) {
 }
 
 Categories.prototype.onResize = function() {
-	var catHeight = this.conf.$cat.outerHeight();
+	var catHeight = this.conf.$cat.height();
 	    itemHeight = Math.round(catHeight/2);
 	    doobleItemWidth = itemHeight*2;
 	
@@ -113,8 +149,6 @@ function Products() {
 Products.prototype.onResize = function() {	
 	var height = Math.round((this.conf.$win.height() - this.conf.padding - 1) / 2),
 	    width = this.prop * height;
-
-	    console.log(height, width, this.conf.padding, this.conf.$win.height())
 
 	this.conf.$items.css({
 		'width' : width,

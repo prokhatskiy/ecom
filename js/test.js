@@ -1,4 +1,12 @@
 $(document).on('ready', function() {
+	$('.l-container').onepage_scroll({
+		sectionContainer: '.l-block',
+		easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+		animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+		pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
+		updateURL: true,
+	});
+
 	var $blocks = $('.l-block'),
 	    $win = $(window),
 	    time = new Date(),
@@ -9,20 +17,13 @@ $(document).on('ready', function() {
 		var now = new Date(),
 		    height;
 
-		height = $win.height();
-
-		$blocks.each(function() {
-			$(this).css({
-				'height' : (height < 300) ? 300 : height
-			});
-		});
-
 		categories.onResize();
 		products.onResize();
 	}
 
 	
 	resize();
+
 	var rtime = new Date(1, 1, 2000, 12,00,00);
 	var timeout = false;
 	var delta = 200;

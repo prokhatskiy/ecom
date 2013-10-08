@@ -6,11 +6,13 @@
 @@include('../blocks/head.html')
     <body>                
         <div class="l-wrapper">
-@@include('../blocks/top.html')
-@@include('../blocks/categories.html')
-@@include('../blocks/products.html')
-@@include('../blocks/footer.html')           
-@@include('../blocks/bottom.html')        
+        	<div class="l-container">
+        		@@include('../blocks/top.html')
+				@@include('../blocks/categories.html')
+				@@include('../blocks/products.html')
+				@@include('../blocks/footer.html')            
+        	</div>      
         </div>
+        @@include('../blocks/bottom.html')
     </body>
 </html>

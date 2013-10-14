@@ -81,6 +81,9 @@
           font-size: 'Open Sans Light';
           text-transform: uppercase;
           margin: 0 10px 10px 0; }
+        .subscribe__email:focus{
+          outline: none;
+          border: 1px solid #157b9a; }
         .subscribe__btn{
           background-color: #157b9a;
           text-transform: uppercase;
@@ -191,7 +194,6 @@
         font-size: 10px;
         color: #828282;
         line-height: 14px; }
-
     .footer-world{
       position: absolute;
       height: 100%;
@@ -226,6 +228,9 @@
         font-family: 'Open Sans Light';
         text-transform: uppercase;
         margin: 0 10px 0 0; }
+      .footer-world__city:focus{
+          outline: none;
+          border: 1px solid #d8502e; }
       .footer-world__btn{
         margin-right: -25px;
         background-color: #d8502e;

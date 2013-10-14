@@ -4,14 +4,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 @@include('../blocks/head.html')
-    <body>                
+
+    <body>
+        @@include('../blocks/topmenu.html')
         <div class="l-wrapper">
         	<div class="l-container">
-        		@@include('../blocks/top.html')
+                @@include('../blocks/top.html')
 				@@include('../blocks/categories.html')
 				@@include('../blocks/products.html')
-				@@include('../blocks/footer.html')            
-        	</div>      
+				@@include('../blocks/footer.html')
+        	</div>
         </div>
         @@include('../blocks/bottom.html')
     </body>

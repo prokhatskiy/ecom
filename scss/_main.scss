@@ -152,6 +152,12 @@
 		position: absolute;
 		display: block;
 		width: 100%;
+
+		&:focus{
+			outline: none;
+			border: 1px solid #157b9a;
+
+		}
 	}
 	
 	@mixin placeholder{
@@ -172,13 +178,16 @@
 	.search__btn{
 		@include hideText;
 		@include rmBtnStyles;
-		@include inline('../img/search-ico.png', no-repeat, center, center);
+		@include inline('../img/search-ico.svg', no-repeat, center, center);
 		position: absolute;
 		z-index: 2;
 		height: 100%;
 		top: 0;
 		right: 0;
 		width: 35px;
+		&:hover{
+			@include inline('../img/search-ico-blue.svg', no-repeat, center, center);
+		}
 	}
 }
 
@@ -258,6 +267,9 @@
 		&:last-child{
 			text-align: right;
 			padding-right: 0;
+		}
+		&:hover{
+			opacity: 0.75;
 		}
 	}
 
@@ -575,26 +587,48 @@
 		&.products__tumbler_active{
 			width: 106px;
 			height: 44px;
-			color: #5d505a;
-			border: 2px solid #5d505a;
 			background-color: #fff;
 		}
 	}
 
 	.products__tumbler_new{
 		background-color: #39a0c2;
+
+		&:hover,
+		&.products__tumbler_active{
+			color: #39a0c2;
+			border: 2px solid #39a0c2;
+		}
 	}
 
 	.products__tumbler_sale{
 		background-color: #d8502e;
+		
+		&:hover,
+		&.products__tumbler_active{
+			color: #d8502e;
+			border: 2px solid #d8502e;
+		}
 	}
 
 	.products__tumbler_featured{
 		background-color: #ed9c2b;
+		
+		&:hover,
+		&.products__tumbler_active{
+			color: #ed9c2b;
+			border: 2px solid #ed9c2b;
+		}
 	}
 
 	.products__tumbler_all{
 		background-color: #5d505a;
+		
+		&:hover,
+		&.products__tumbler_active{
+			color: #5d505a;
+			border: 2px solid #5d505a;
+		}
 	}
 
 	.products__row{

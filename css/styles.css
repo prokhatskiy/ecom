@@ -604,7 +604,8 @@ html {
     bottom: 60px;
     margin: 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    overflow: hidden; }
   .promo .promo__main-i {
     position: absolute;
     top: 0;
@@ -625,6 +626,31 @@ html {
     -moz-transition: opacity 0s;
     -o-transition: opacity 0s;
     transition: opacity 0s; }
+    .promo .promo__main-i .promo__main-text {
+      max-width: 1294px;
+      margin: 0 auto;
+      min-width: 960px; }
+    .promo .promo__main-i .promo__main-text-l1 {
+      position: absolute;
+      top: 30%;
+      padding: 8px;
+      border-top: 6px solid #fff;
+      border-bottom: 6px solid #fff;
+      font-family: 'Aleo';
+      font-weight: bold;
+      font-size: 131px;
+      color: #fff;
+      text-align: right;
+      line-height: 100px;
+      text-transform: uppercase; }
+      .promo .promo__main-i .promo__main-text-l1 .collection {
+        display: block;
+        position: absolute;
+        right: 0;
+        font-family: 'Helvetica Neue Ultralight';
+        font-weight: normal;
+        font-size: 53px;
+        line-height: 80px; }
   .promo .promo__main-i_select {
     z-index: 2;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
